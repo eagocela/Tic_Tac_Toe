@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- TITLE -->
+    <title>TIC TAC TOE</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.png" />
+
+    <!-- STYLES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/1d4397aa5b.js" crossorigin="anonymous"></script>
+
+    <!-- SCRIPT -->
+    <script defer src="script.js"></script>
+
+</head>
+<body>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container-main">
+
+        <!-- PAGE SETTINGS -->
+        <i id="settingsButton" class="fa-solid fa-gear"></i>
+       
+        <div class="settings hide">
+            <h2>SETTINGS</h2>
+            <h3>BG Music</h3>
+            <div class="flex-row-item">
+                <span id="bgmON" class="active">ON</span>
+                <span id="bgmOFF">OFF</span> 
+            </div>
+
+            <h3>Sound Effects</h3>
+            <div class="flex-row-item">
+                <span id="sfxON" class="active">ON</span>
+                <span id="sfxOFF">OFF</span>
+            </div>
+
+            <h3>Dark Mode</h3>
+            <div class="flex-row-item">
+                <span id="drkON">ON</span>
+                <span id="drkOFF" class="active">OFF</span>
+            </div>
+
+            <h3 id="settingsCloseButton">CLOSE</h3>
+        </div>
+
+        <!-- SELECT PLAYER -->
+        <div class="container-playerSelect">
+            <div class="modeSelect flex-column-item">
+                <h1 id=modeSelectTitle>Game Mode</h1>
+                <h2 id="singlePlayer" class="selection">Single Player</h2>
+                <h2 id="twoPlayers" class="selection">Multi-Player</h2>
+            </div>
+            <div class="characterSelect flex-column-item hide">
+                <h2 id="charSelectTitle">Who do you want to play as?</h2>
+                <h2 id="selectX" class="selection">X - Player 1</h2>
+                <h2 id="selectO" class="selection">O - Player 2</h2>
+            </div>
+        </div>
+
+       <!-- BACKGROUND PICS -->
+
+       <!-- desktop -->
+        <div class="container-x">
+            <img src="./assets/xmain.png">
+        </div>
+        <div class="container-o">
+            <img src="./assets/omain.png" alt="">
+        </div>
+        <!-- tablet -->
+        <div class="container-x2">
+            <img src="./assets/xpad.png" alt="">
+        </div>
+        <div class="container-o2">
+            <img src="./assets/opad.png" alt="">
+        </div>
+        <!-- phone -->
+        <div class="container-x3">
+            <img src="./assets/xSmall.png" alt="">
+        </div>
+        <div class="container-o3">
+            <img src="./assets/oSmall.png" alt="">
+        </div>
+
+        <!-- CENTER/MAIN -->
+
+        <div class="container-mainComponents">
+
+            <!-- tictactoe title -->
+            <div class="container-title flex-column-item">
+                <a href="https://fontmeme.com/tiktok-font/"><img src="https://fontmeme.com/permalink/220422/ece2849245cc4229579735f249b10bd0.png" alt="tiktok-font" border="0"></a>
+            </div>
+
+            <!-- SCOREBOARD -->
+            <div class="container-scoreBoard"> 
+                <div class="wrapper-scoreboard">
+                    <div class="flex-row-item">
+                        <div class="container-emblem">
+                            <img id="xEmblem" src="./assets/xEmbelm.png">
+                        </div>
+                        <div class="container-xScoreBoard scoreboard">
+                            <h2>PLAYER 1</h2>
+                            <h2 class="scoreX score">00</h2>
+                        </div>
+                    </div>
+                    <div class="flex-row-item">
+                        <div class="container-oScoreBoard scoreboard">
+                            <h2>PLAYER 2</h2>
+                            <h2 class="scoreO score">00</h2>
+                        </div>
+                        <div class="container-emblem">
+                            <img id="oEmblem" src="./assets/oEmbelm.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="slider"></div>
+            </div>
+
+            <!-- BOARD // will try on JS -->
+            <h2 class="announcement"></h2>
+            <div class="board x">
+            </div>
+
+            <!-- RESULTS POP UP -->
+            <div class="container-winningMessage hide">
+                <h2 class="winningMessage"></h2>
+                <div class="flex-row-item">
+                    <button id="checkHistory" class="gameButton">HISTORY</button>
+                    <button id="rematch" class="rematch gameButton">REMATCH</button>
+                </div>
+            </div>
+
+            <!-- HISTORY BUTTONS -->
+            <div class="container-historyButtons flex-column-item hide">
+                <div class="container-prevNext flex-row-item">
+                    <button id="previous" class="previous gameButton">BACK</button>
+                    <button id="next" class="next gameButton">NEXT</button>
+                </div>
+                <button id="rematch" class="rematch gameButton">REMATCH</button>
+            </div>
+
+        </div>
+
+        <!-- RESET -->
+        <button id="reset">RESET</button>
+    </div>
+
+    <!-- BACKGROUND MUSIC -->
+    <audio autoplay id="bgMusic" control src="./assets/bgMusic.mp3" type="audio/mpeg"></audio>
+</body>
+</html>
